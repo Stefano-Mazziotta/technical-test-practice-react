@@ -1,4 +1,4 @@
-import { API_CATS_FACT } from '../consts'
+import { API_CATS_FACT } from '../constants/APIs'
 
 export const getRandomFact = async () => {
   try {

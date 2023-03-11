@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { API_PREFIX_CAT_IMG, API_CATS_GET_IMG } from '../consts'
+import { API_PREFIX_CAT_IMG, API_CATS_GET_IMG } from '../constants/APIs'
 
 export function useCatImage ({ fact }) {
   const [catImageSrc, setCatImageSrc] = useState('')
