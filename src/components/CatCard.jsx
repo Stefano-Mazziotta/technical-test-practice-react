@@ -1,18 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useCatFact } from '../hooks/useCatFact'
 import { useCatImage } from '../hooks/useCatImage'
 
-import { getRandomFact } from '../services/getRandomFact'
-
 export function CatCard () {
-  const [fact, setFact] = useState('')
+  const { fact, updateFact } = useCatFact()
   const { catImageSrc } = useCatImage({ fact })
 
-  useEffect(() => {
-    getRandomFact().then((fact) => setFact(fact))
-  }, [])
-
-  const handleClick = () => {
-    getRandomFact().then((fact) => setFact(fact))
+  const handleClick = async () => {
+    await updateFact()
   }
 
   return (
