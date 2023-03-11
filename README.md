@@ -7,3 +7,5 @@ I implemented useState, useEffect, custom hooks applying code reuse.
 - Show the result on the screen.
 
 - Add a button that changes the fact and propagates the change in the application.
+
+- write a test end to end
