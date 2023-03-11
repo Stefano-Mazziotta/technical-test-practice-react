@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useCatImage } from '../hooks/useCatImage'
 
-import { getRandomFact } from '../service/getRandomFact'
+import { getRandomFact } from '../services/getRandomFact'
 
 export function CatCard () {
   const [fact, setFact] = useState('')
