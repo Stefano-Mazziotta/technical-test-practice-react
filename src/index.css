@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui;
+    font-family: Helvetica;
 }
 
 body{
@@ -19,6 +19,7 @@ body{
 }
 
 main {
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -26,40 +27,46 @@ main {
 }
 
 main .container {
-    width: 70%;
+    width: 100%;
     height: 100vh;
     background-color: var(--violet-2);
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    gap: 10px;
+    align-items: center;
+    gap: 50px;
 }
 
 .container .wrap-img-text {
-    width: 100%;
+    width: 95%;
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
 }
 
 .container .wrap-img-text p{
-    width: 50%;
-    font-size: 24px;
-    max-height: 600px; 
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #9482cb;
+    text-align: center;
 }
 
-.container .wrap-img-text img {
+.container .wrap-img-text .wrap-img {
+    width: 100%;
+    height: 100%;
     padding: 10px;
     background-color: var(--violet-1);
-    display: block;
-    width: 400px;
-    height: 400px;   
+} 
+.container .wrap-img-text .wrap-img img {
+    width: 100%;
+    height: 100%;   
 }
 
 .container .btn {
@@ -72,10 +79,34 @@ main .container {
     color: white;
     font-size: 16px;
     transition: all .3s ease;
+    margin-left: auto;
+    margin-right: auto;
 }
 .container .btn:hover{
     cursor: pointer;
     background-color: var(--violet-3);
 }
 
+
+@media (min-width: 768px) {
+    .container .wrap-img-text {
+        width: 80%;
+    }     
+}
+
+@media (min-width: 1024px) {
+    .container .wrap-img-text {
+        width: 70%;
+    }
+    .container .wrap-img-text .wrap-img {
+        width: 500px;
+        height: 500px;
+    } 
+}
+
+@media (min-width: 1440px) {
+    .container .wrap-img-text {
+        width: 30%;
+    }
+}
 

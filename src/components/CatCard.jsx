@@ -14,10 +14,12 @@ export function CatCard () {
       <div className='wrap-img-text'>
         {
           catImageSrc &&
-            <img
-              src={catImageSrc}
-              alt={`image extracted using three first words from '${fact}'`}
-            />
+            <div className='wrap-img'>
+              <img
+                src={catImageSrc}
+                alt={`image extracted using three first words from '${fact}'`}
+              />
+            </div>
         }
         {fact && <p>{fact}</p>}
       </div>
